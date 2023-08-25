@@ -1,8 +1,7 @@
 def getNthFib(n):
-    prevValue = 1
-    prevPrevValue = 0
+    values = [0, 1]
     for i in range(2, n):
-        temp = prevValue
-        prevValue = prevValue + prevPrevValue
-        prevPrevValue = temp
-    return prevValue if n > 1 else prevPrevValue
+        temp = values[1]
+        values[1] = values[0] + values[1]
+        values[0] = temp
+    return values[1] if n > 1 else values[0]
