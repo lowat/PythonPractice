@@ -1,8 +1,8 @@
     def encode(self, strs):
-        res = ''
+        result = ''
         for word in strs:
-            res += len(word) + '#' + word
-        return res
+            result += len(word) + '#' + word
+        return result
 
     def decode(self, str):
         res = []
