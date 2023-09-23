@@ -8,12 +8,12 @@ class Solution:
         for number, value in count.items():
             freq[value].append(number)
         
-        result = []
+        res = []
         for i in range(len(freq) - 1, 0, -1):
             for num in freq[i]:
-                result.append(num)
-                if len(result) == k:
-                    return result
-        return result
+                res.append(num)
+                if len(res) == k:
+                    return res
+        return res
 
         
